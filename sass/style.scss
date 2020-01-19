@@ -16,12 +16,12 @@ body {
 
 nav {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  height: 50px;
+  height: 60px;
   background: #ffffff;
 }
 
 .navbar {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .main-nav {
@@ -30,10 +30,8 @@ nav {
 }
 
 .nav-links {
-  background: gray;
   display: block;
   padding: 20px 0;
-  border-bottom: 1px solid #000;
 }
 
 .nav-links,
@@ -49,13 +47,16 @@ nav {
 
 .main-nav li {
   text-align: center;
+  &:nth-child(odd) {
+    background: #ccc;
+  }
 }
 
 .logo {
   display: inline-block;
   font-size: 1rem;
   margin-left: 1rem;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 .navbar-toggle {
@@ -76,7 +77,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 50px;
+    height: 60px;
     align-items: center;
   }
 
@@ -92,7 +93,7 @@ nav {
   }
 
   .nav-links {
-    margin-left: 30px;
+    margin-left: 40px;
     background: none;
     border: none;
   }
