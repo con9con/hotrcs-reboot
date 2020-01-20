@@ -6,8 +6,25 @@
   line-height: 1.5;
 }
 
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
 .wrapper {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -19,11 +36,11 @@ body {
 .btn {
   text-decoration: none;
   background: grey;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  display: inline;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 nav {
@@ -76,8 +93,8 @@ nav {
 
 .navbar-toggle {
   position: absolute;
-  top: 15px;
-  right: 1rem;
+  top: 20px;
+  right: 1.5rem;
   cursor: pointer;
   color: #c13e33;
   font-size: 1rem;
@@ -89,7 +106,7 @@ nav {
 
 .hero,
 .qoute {
-  padding: 0.5rem 2rem;
+  padding: 1.5rem 2rem;
 }
 
 .hero {
@@ -100,23 +117,23 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 400px;
 }
 
 .hero h1 {
-  font-size: 2rem;
   line-height: 1.3;
   padding-bottom: 10px;
 }
 
 .hero h3 {
   color: #c13e33;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   line-height: 1.2;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .hero .btn {
-  width: 120px;
+  width: 140px;
   text-align: center;
   background: #c13e33;
 }
@@ -147,11 +164,41 @@ nav {
 .qoute select {
   display: block;
   border: none;
-  height: 2.5rem;
+  height: 3rem;
   margin: 0.5rem 0;
   width: 100%;
   border-radius: 0;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  background: #344b5e;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.qoute input::-webkit-input-placeholder,
+.qoute select::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute input:-ms-input-placeholder,
+.qoute select:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute input::-ms-input-placeholder,
+.qoute select::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute input::placeholder,
+.qoute select::placeholder {
+  color: #a7a7a7;
+}
+
+.qoute select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #a7a7a7;
 }
 
 .qoute textarea {
@@ -161,15 +208,103 @@ nav {
   margin: 0.4rem 0;
   width: 100%;
   border-radius: 0;
-  padding-left: 0.5rem;
+  padding: 1rem;
+  background: #344b5e;
+  font-size: 0.9rem;
+}
+
+.qoute textarea::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute textarea:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute textarea::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+.qoute textarea::placeholder {
+  color: #a7a7a7;
 }
 
 .qoute .btn {
   background: #e0aa25;
   float: right;
+  margin-top: 0.5rem;
 }
 
-@media screen and (min-width: 600px) {
+.services {
+  padding: 2rem;
+}
+
+.services h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.services .service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1.5rem auto;
+  color: #fff;
+}
+
+.services .service-card h4 {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.services .service-card:nth-child(1) {
+  background: #c13e33;
+}
+
+.services .service-card:nth-child(1) .btn {
+  background: #842b23;
+}
+
+.services .service-card:nth-child(2) {
+  background: #344b5e;
+}
+
+.services .service-card:nth-child(2) .btn {
+  background: #19242d;
+}
+
+.services .service-card:nth-child(3) {
+  background: #e0aa25;
+}
+
+.services .service-card:nth-child(3) .btn {
+  background: #a27a17;
+}
+
+.services .service-card .btn {
+  width: 200px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.about {
+  padding: 2rem 2rem;
+  height: 400px;
+  background-image: url("../img/final1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 700px) {
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,9 +353,19 @@ nav {
     color: #a7a7a7;
     background: none;
   }
+  .service-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+  .about {
+    background-size: contain;
+  }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;

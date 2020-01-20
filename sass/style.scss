@@ -4,8 +4,26 @@
   margin: 0;
   line-height: 1.5;
 }
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
 .wrapper {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -17,11 +35,11 @@ body {
 .btn {
   text-decoration: none;
   background: grey;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  display: inline;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 nav {
@@ -73,8 +91,8 @@ nav {
 
 .navbar-toggle {
   position: absolute;
-  top: 15px;
-  right: 1rem;
+  top: 20px;
+  right: 1.5rem;
   cursor: pointer;
   color: #c13e33;
   font-size: 1rem;
@@ -86,28 +104,28 @@ nav {
 
 .hero,
 .qoute {
-  padding: 0.5rem 2rem;
+  padding: 1.5rem 2rem;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
+  min-height: 400px;
 
   h1 {
-    font-size: 2rem;
     line-height: 1.3;
     padding-bottom: 10px;
   }
 
   h3 {
     color: #c13e33;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     line-height: 1.2;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .btn {
-    width: 120px;
+    width: 140px;
     text-align: center;
     background: #c13e33;
   }
@@ -133,11 +151,23 @@ nav {
   select {
     display: block;
     border: none;
-    height: 2.5rem;
+    height: 3rem;
     margin: 0.5rem 0;
     width: 100%;
     border-radius: 0;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
+    background: #344b5e;
+    color: #fff;
+    font-size: 0.9rem;
+
+    &::placeholder {
+      color: rgb(167, 167, 167);
+    }
+  }
+
+  select {
+    appearance: none;
+    color: rgb(167, 167, 167);
   }
 
   textarea {
@@ -147,16 +177,83 @@ nav {
     margin: 0.4rem 0;
     width: 100%;
     border-radius: 0;
-    padding-left: 0.5rem;
+    padding: 1rem;
+    background: #344b5e;
+    font-size: 0.9rem;
+
+    &::placeholder {
+      color: rgb(167, 167, 167);
+    }
   }
 
   .btn {
     background: #e0aa25;
     float: right;
+    margin-top: 0.5rem;
   }
 }
 
-@media screen and (min-width: 600px) {
+.services {
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+    color: #fff;
+
+    h4 {
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &:nth-child(1) {
+      background: #c13e33;
+
+      .btn {
+        background: darken(#c13e33, 15);
+      }
+    }
+    &:nth-child(2) {
+      background: #344b5e;
+
+      .btn {
+        background: darken(#344b5e, 15);
+      }
+    }
+    &:nth-child(3) {
+      background: #e0aa25;
+
+      .btn {
+        background: darken(#e0aa25, 15);
+      }
+    }
+
+    .btn {
+      width: 200px;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+}
+
+.about {
+  padding: 2rem 2rem;
+  height: 400px;
+  background-image: url('../img/final1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 700px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -199,9 +296,18 @@ nav {
     color: rgb(167, 167, 167);
     background: none;
   }
+  .service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+
+  .about {
+    background-size: contain;
+  }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   header {
     display: flex;
   }
