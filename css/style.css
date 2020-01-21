@@ -36,21 +36,19 @@ body {
 .btn {
   text-decoration: none;
   background: grey;
-  padding: 0.8rem 1rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
   color: #fff;
   text-transform: uppercase;
   font-size: 0.9rem;
   display: inline-block;
+  text-align: center;
 }
 
 nav {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #ffffff;
-}
-
-.navbar {
-  font-size: 0.8rem;
 }
 
 .main-nav {
@@ -85,7 +83,7 @@ nav {
 
 .logo {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-left: 2rem;
   line-height: 60px;
   font-weight: bold;
@@ -109,6 +107,12 @@ nav {
   padding: 1.5rem 2rem;
 }
 
+.image-box {
+  /* Here's the trick */
+  background: -webkit-gradient(linear, left top, right bottom, from(white), to(rgba(255, 255, 255, 0.5))), url(../img/final1.png);
+  background: linear-gradient(to bottom right, white, rgba(255, 255, 255, 0.5)), url(../img/final1.png);
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +122,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 400px;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -133,9 +138,10 @@ nav {
 }
 
 .hero .btn {
-  width: 140px;
+  width: 200px;
   text-align: center;
   background: #c13e33;
+  margin-left: 0;
 }
 
 .hero span {
@@ -290,18 +296,15 @@ nav {
   background: #a27a17;
 }
 
-.services .service-card .btn {
-  width: 200px;
-  text-align: center;
-  margin: 1rem;
-}
-
 .about {
   padding: 2rem 2rem;
   height: 400px;
-  background-image: url("../img/final1.png");
+}
+
+.bgimg {
+  width: 100%;
+  height: 400px;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 700px) {
@@ -360,8 +363,17 @@ nav {
         grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.5rem;
   }
+  .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .about {
-    background-size: contain;
+    width: 50%;
+  }
+  .bgimg {
+    width: 50%;
+    background-size: cover;
   }
 }
 
