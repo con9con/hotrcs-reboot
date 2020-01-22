@@ -47,7 +47,7 @@ body {
 nav {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   background: #ffffff;
 }
@@ -55,6 +55,13 @@ nav {
 .main-nav {
   list-style-type: none;
   display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(233, 233, 233, 1);
+  z-index: 1;
 }
 
 .nav-links {
@@ -75,10 +82,8 @@ nav {
 
 .main-nav li {
   text-align: center;
-
-  &:nth-child(odd) {
-    background: #ccc;
-  }
+  position: relative;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
 }
 
 .logo {
@@ -188,6 +193,7 @@ nav {
     padding: 1rem;
     background: #344b5e;
     font-size: 0.9rem;
+    resize: none;
 
     &::placeholder {
       color: rgb(167, 167, 167);
@@ -259,7 +265,7 @@ nav {
   // background: url(../img/final1.png);
   background-size: cover;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 740px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -269,18 +275,17 @@ nav {
   }
 
   .main-nav {
+    background: none;
     display: flex;
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    position: inherit;
+    width: auto;
   }
 
   .main-nav li {
     margin: 0;
-
-    &:nth-child(odd) {
-      background: none;
-    }
   }
 
   .nav-links {

@@ -49,13 +49,21 @@ nav {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: #ffffff;
 }
 
 .main-nav {
   list-style-type: none;
   display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #e9e9e9;
+  z-index: 1;
 }
 
 .nav-links {
@@ -77,10 +85,8 @@ nav {
 
 .main-nav li {
   text-align: center;
-}
-
-.main-nav li:nth-child(odd) {
-  background: #ccc;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -219,6 +225,7 @@ nav {
   padding: 1rem;
   background: #344b5e;
   font-size: 0.9rem;
+  resize: none;
 }
 
 .qoute textarea::-webkit-input-placeholder {
@@ -309,7 +316,7 @@ nav {
   background-size: cover;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 740px) {
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -324,6 +331,7 @@ nav {
             align-items: center;
   }
   .main-nav {
+    background: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -335,12 +343,11 @@ nav {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    position: inherit;
+    width: auto;
   }
   .main-nav li {
     margin: 0;
-  }
-  .main-nav li:nth-child(odd) {
-    background: none;
   }
   .nav-links {
     margin-left: 40px;
