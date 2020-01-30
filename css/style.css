@@ -431,6 +431,7 @@ footer {
             justify-content: flex-end;
     position: inherit;
     width: auto;
+    border-top: none;
   }
   .main-nav li {
     margin: 0;
