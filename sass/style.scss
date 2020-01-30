@@ -45,7 +45,7 @@ h2,
 h3,
 h4 h5 {
   font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 
 h1 {
@@ -100,6 +100,21 @@ select {
   @extend .gray-text;
 }
 
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f107';
+  font-size: 28px;
+  top: 12px;
+  right: 20px;
+  @extend .gray-text;
+  pointer-events: none;
+}
+
 textarea {
   display: block;
   border: none;
@@ -145,11 +160,13 @@ nav {
   list-style-type: none;
   display: none;
   position: absolute;
-  left: 0;
+  left: 100%;
+  margin-left: -90%;
   top: 100%;
-  width: 100%;
+  width: 80%;
   background: rgba(233, 233, 233, 1);
   z-index: 1;
+  border-top: 4px $red solid;
 }
 
 .nav-links {
