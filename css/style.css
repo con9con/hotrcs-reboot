@@ -21,25 +21,25 @@ select, .btn, .services .service-card {
 
 .gray-text, input::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
-select, textarea::-webkit-input-placeholder {
+select, .select-wrapper:after, textarea::-webkit-input-placeholder {
   color: #a7a7a7;
 }
 
 .gray-text, input:-ms-input-placeholder,
 select:-ms-input-placeholder,
-select, textarea:-ms-input-placeholder {
+select, .select-wrapper:after, textarea:-ms-input-placeholder {
   color: #a7a7a7;
 }
 
 .gray-text, input::-ms-input-placeholder,
 select::-ms-input-placeholder,
-select, textarea::-ms-input-placeholder {
+select, .select-wrapper:after, textarea::-ms-input-placeholder {
   color: #a7a7a7;
 }
 
 .gray-text, input::placeholder,
 select::placeholder,
-select, textarea::placeholder {
+select, .select-wrapper:after, textarea::placeholder {
   color: #a7a7a7;
 }
 
@@ -64,7 +64,7 @@ h2,
 h3,
 h4 h5 {
   font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 
 h1 {
@@ -115,6 +115,20 @@ select {
           appearance: none;
 }
 
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper:after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: '\f107';
+  font-size: 28px;
+  top: 12px;
+  right: 20px;
+  pointer-events: none;
+}
+
 textarea {
   display: block;
   border: none;
@@ -157,11 +171,13 @@ nav {
   list-style-type: none;
   display: none;
   position: absolute;
-  left: 0;
+  left: 100%;
+  margin-left: -90%;
   top: 100%;
-  width: 100%;
+  width: 80%;
   background: #e9e9e9;
   z-index: 1;
+  border-top: 4px #c13e33 solid;
 }
 
 .nav-links {
@@ -416,6 +432,7 @@ footer {
             justify-content: flex-end;
     position: inherit;
     width: auto;
+    border-top: none;
   }
   .main-nav li {
     margin: 0;
