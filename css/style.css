@@ -296,15 +296,15 @@ nav {
 }
 
 .services .service-card:nth-child(1) .btn {
-  background: #d0574d;
+  background: #d25f55;
 }
 
 .services .service-card:nth-child(2) .btn {
-  background: #283947;
+  background: #2b3e4e;
 }
 
 .services .service-card:nth-child(3) .btn {
-  background: #e5b849;
+  background: #e6bb52;
 }
 
 .about {
@@ -368,6 +368,7 @@ footer {
 
 .footer-link-header {
   color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
 }
 
 .copyright {
